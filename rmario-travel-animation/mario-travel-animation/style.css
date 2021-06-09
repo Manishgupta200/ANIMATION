@@ -1,0 +1,121 @@
+/*HOME PAGE1 START---------------------------------------------------------------------------------------------*/
+html, body{
+	height:100%;
+	width::100%;
+	overflow:hidden;
+	margin:0;
+}
+
+#sky, #grass, #road{
+	position:relative;
+}
+
+#sky{
+	height:40%;
+	background:skyblue;
+}
+
+#grass{
+	height:30%;
+	background:seagreen;
+}
+
+#road{
+	height:30%;
+	background:dimgrey;
+	box-sizing:border-box;
+	border-top:10px solid grey;
+	border-bottom:10px solid grey;
+	width:100%;
+}
+
+.lines{
+	border:5px dashed #fff;
+	height:10px;
+	position:absolute;
+	top:45%;
+	width:100%;
+	box-sizing:border-box;
+}
+
+.mario{
+	position:absolute;
+	top:-30%;
+	left:0;
+	animation:drive 4s both infinite linear,
+	jump 1s 1s ease;
+}
+@keyframes drive{
+	from{transform:translateX(-100%)}
+	to{transform:translateX(1000%)}
+}
+
+@keyframes jump{
+	0%{top:-40px}
+	50%{top:-100px}
+	100%{top:-40px}
+}
+
+.tiger{
+	position:absolute;
+	top:-2%;
+	left:0;
+	animation-name:drive;
+	animation-duration:4s;
+	animation-fill-mode:both;
+	animation-iteration-count:infinite;
+	animation-direction:normal;  /*also.  alternate-reverse, reverse, alternate*/
+	animation-timing-function:linear;
+	animation-delay: 1s;
+}
+
+.cloud{
+	position:absolute;
+}
+
+.cloud:nth-child(1){
+	width:150px;
+	top:20%;
+	opacity:0.5;
+	animation:wind 40s linear infinite reverse;
+}
+
+.cloud:nth-child(2){
+	width:200px;
+	top:0;
+	animation:wind 30s ease-out infinite alternate;
+}
+
+.cloud:nth-child(3){
+	width: 250px;
+	top: 10%;
+	animation: wind 35s linear 0s infinite normal both;
+}
+
+@keyframes wind{
+	from{left:-20%}
+	to{left:100%}
+}
+
+#sky div.link{
+	background: #FA0343;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	color: #FFFFFF;
+	width: 100%;
+	text-align: center;
+}
+#sky div.link h1{
+	margin: 0;
+	font-weight: bold;
+	font-size: 300%;
+	/*width: 50%;*/
+	display: inline-block;
+	background: blue;
+}
+#sky div.link h1 a{
+	color: #fff;
+	text-decoration:none;
+}
+/*HOME PAGE1 END--------------------------------------------------------------------------------------*/
