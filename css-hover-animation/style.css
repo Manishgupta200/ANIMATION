@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	animation: animateColor 5s linear infinite;
+	background-color: #F4353E;
+}
+@keyframes animateColor{
+	0%{
+		filter:hue-rotate(0deg);
+	}
+	100%{
+		filter: hue-rotate(360deg);
+	}
+}
+.container span{
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+img{
+	position: absolute;
+	width: 100px;
+	transform: scale(0);
+	z-index: 2;
+	transition: 20s;
+}
+.container span:hover > img{
+	transition: 0s;
+	transform: scale(1);
+}
