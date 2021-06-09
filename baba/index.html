@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animated glowing gradiend loader effect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Marck+Script&display=swap" rel="stylesheet">
+<style type="text/css">
+body{
+margin:0;
+padding:0;
+//display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#000;
+//background:#240229;
+}
+.loader{
+top:32%;
+left:37%;
+//border:1px solid #000;
+position:relative;
+height:100px;
+width:100px;
+border-radius:50%;
+
+background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+animation:animate 3s linear infinite;
+}
+@keyframes animate{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+img.head{
+position:absolute;
+    top:41.5%;
+    left:41%;
+height:17%;
+//width:100%;
+border-radius:100px;
+//background:linear-gradient(blue,red,green);
+
+z-index:3;
+animation:ani 3s linear infinite;
+animation-direction:alternate;
+}
+@keyframes ani{
+0%{}
+100%{}
+}
+/*img.body{
+position:absolute;
+top:43%;
+opacity:0.7;
+z-index:2;
+}*/
+img.body{
+transform:scale(1.3);
+position:absolute;
+top:40%;
+left:10.5%;
+z-index:2;
+}
+img.hand{
+transform:scale(0.29);
+position:absolute;
+top:32%;
+left:-420px;
+//transform:scale(0.7);
+z-index:0;
+transform-origin:100%;
+animation:force 3s infinite;
+}
+@keyframes force{
+0%{transform:rotateZ(0) scale(0.29);}
+50%{transform:rotateZ(30deg) scale(0.29);}
+100%{transform:rotateZ(0) scale(0.29);}
+}
+img.ball{
+transform:scale(0.3);
+position:absolute;
+top:33%;
+left:-30%;
+z-index:6;
+animation:roll 3s ease-in-out infinite;
+animation-direction:alternate;
+}
+@keyframes roll{
+0%{transform:translateY(0) scale(0.3);}
+50%{transform:translateY(-200px) scale(0.3);}
+100%{transform:translateY(0) scale(0.3);}
+}
+.loader span{
+position:absolute;
+//top:50px;
+//left:50px;
+height:100%;
+width:100%;
+border-radius:50%;
+background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+.loader span:nth-child(1){
+filter:blur(5px);
+}
+.loader span:nth-child(2){
+filter:blur(10px);
+}
+.loader span:nth-child(3){
+filter:blur(25px);
+}
+.loader span:nth-child(4){
+filter:blur(50px);
+}
+/*.loader span.two{
+position:absolute;
+top:90px;
+left:90px;
+height:100px;
+width:100px;
+//border-radius:50%;
+background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+
+
+
+.loader span.three{
+position:absolute;
+top:90px;
+right:90px;
+height:100%;
+width:100%;
+//border-radius:50%;
+background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+
+
+
+.loader span.four{
+position:absolute;
+bottom:110px;
+left:110px;
+height:100%;
+width:100%;
+//border-radius:50%;
+background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+
+*/
+
+/*.loader:before{
+content:'';
+position:absolute;
+padding:2px;
+top:47px;
+left:36px;
+//right:10px;
+//bottom:10px;
+//background:#000;
+background:#240029;
+border-radius:50%;
+z-index:5;
+animation:eye1 3s linear infinite;
+animation-direction:alternate;
+}
+@keyframes eye1{
+0%{background:red;}
+100%{background:#000;}
+}
+.loader:after{
+content:'';
+position:absolute;
+padding:2px;
+top:46px;
+//left:10px;
+right:36px;
+//bottom:10px;
+//background:#000;
+background:#240029;
+border-radius:50%;
+z-index:5;
+animation:eye2 3s linear infinite;
+animation-direction:alternate;
+}
+@keyframes eye2{
+0%{background:red;}
+100%{background:#000;}
+}*/
+
+
+div.leye{
+color:#fff;
+z-index:2;
+background:red;
+padding:2px;
+border-radius:50%;
+position:absolute;
+//top:272px;
+top:49.5%;
+//left:166px;
+left:46%;
+animation:eye1 3s linear infinite;
+animation-direction:alternate;
+}
+@keyframes eye1{
+0%{background:red;transform:translateX(-2px);padding:2px;}
+25%{background:#37421D;}
+50%{background:navy;}
+75%{background:#006262;}
+100%{background:#000;transform:translateX(3px);}
+}
+div.reye{
+color:#fff;
+z-index:21;
+background:red;
+padding:2px;
+border-radius:50%;
+position:absolute;
+//top:271px;
+top:49.3%;
+//left:190px;
+left:53%;
+animation:eye2 3s linear infinite;
+animation-direction:alternate;
+}
+@keyframes eye2{
+0%{background:red;transform:translateX(-1.7px);padding:1.8px;}
+25%{background:#37421D;}
+50%{background:navy;padding:2px;}
+75%{background:#006262;}
+100%{background:#000;transform:translateX(2px);padding:1.8px;}
+}
+
+
+h1{
+position:absolute;
+top:75%;
+color:#fff;
+letter-spacing:10px;
+text-transform:uppercase;
+font-family: 'Grenze Gotisch', cursive;
+}
+
+</style>
+</head>
+<body>
+<div class="leye"></div>
+<div class="reye"></div>
+<img class="head" src="blow.png">
+<!--<img class="body" src="file:///storage/emulated/0/menu/bodydy.png">-->
+<img class="body" src="siva3.png">
+<img class="hand" src="sivahands.png">
+<img class="ball" src="earthb.png">
+<h1>Bikash baba</h1>
+<div class="loader">
+<span class="one"></span>
+<span class="two"></span>
+<span class="three"></span>
+<span class="four"></span>
+</div>
+</body>
+</html>
